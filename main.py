@@ -1,44 +1,19 @@
-from sortinganth import *
+from colors import *
+from bubble import *
+from selection import *
+from combes import *
 import pygame
-import random
 
-HEIGHT = 600
-WIDTH = 800
-window = pygame.display.set_mode((WIDTH, HEIGHT))
+window = pygame.display.set_mode((1000, 600))
 pygame.display.set_caption("Sorting Algorithms")
 
-def list_red():
-    liste_red = []  # Définissez localement la liste liste_red
-    for i in range(10):
-        liste_red.append(random.randint(0, 255))
-    return liste_red
 
-def list_blue():
-    liste_blue = []  # Définissez localement la liste liste_blue
-    for i in range(10):
-        liste_blue.append(random.randint(0, 255))
-    return liste_blue
+NUM_SECTIONS = 1000
+WHITE = (255, 255, 255)
 
-def list_green():
-    liste_green = []  # Définissez localement la liste liste_green
-    for i in range(10):
-        liste_green.append(random.randint(0, 255))
-    return liste_green
-
-def list_rgb():
-    liste_rgb = []
-    liste_red = list_red()
-    liste_blue = list_blue()
-    liste_green = list_green()
-    for i in range(10):
-        liste_rgb.append((liste_red[i], liste_blue[i], liste_green[i]))
-    return liste_rgb
-
-liste_rgb = list_rgb()
+liste_rgb = list_rgb(NUM_SECTIONS)
 liste_hsv = RGB_to_HSV(liste_rgb)
 
-WHITE = (255, 255, 255)
-NUM_SECTIONS = 10
 
 # Initialisation de pygame
 pygame.init()
@@ -52,8 +27,12 @@ while running:
             running = False
     # Trier une étape de la liste si le tri n'est pas terminé
     if index < NUM_SECTIONS:
-        liste_hsv = bubble_sort_step(liste_hsv)
-        HSV_to_RGB(liste_hsv, liste_rgb, window, WIDTH, HEIGHT, WHITE, NUM_SECTIONS)
+        liste_hsv_bubble = bubble_sort_step(liste_hsv)
+        HSV_to_RGB(liste_hsv_bubble, window, liste_rgb, 150, 150, 100, WHITE, NUM_SECTIONS)
+        liste_hsv_selection = selection_sort(liste_hsv)
+        HSV_to_RGB(liste_hsv_selection, window, liste_rgb, 450, 150, 100, WHITE, NUM_SECTIONS)
+        liste_hsv_combes = combes_sort(liste_hsv)
+        HSV_to_RGB(liste_hsv_combes, window, liste_rgb, 750, 150, 100, WHITE, NUM_SECTIONS)
         index += 1
 
-    pygame.quit()
+pygame.quit()
