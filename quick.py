@@ -1,6 +1,6 @@
 from colors import HSV_to_RGB
 
-def quick_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
+def quick_sort(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     n = len(liste_hsv)
     if n <= 1:
         return liste_hsv  # Cas de base : liste de taille 0 ou 1
@@ -11,8 +11,8 @@ def quick_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     right = [x for x in liste_hsv if x > pivot]
 
     # Appels récursifs de quick_sort pour trier les partitions gauche et droite
-    left_sorted = quick_sort(left, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
-    right_sorted = quick_sort(right, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+    left_sorted = quick_sort(left, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+    right_sorted = quick_sort(right, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
 
     # Vérifier si la partition gauche est vide
     if left_sorted is None:
@@ -26,4 +26,4 @@ def quick_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     liste_hsv = left_sorted + middle + right_sorted
     
     # Conversion HSV en RGB
-    HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+    HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

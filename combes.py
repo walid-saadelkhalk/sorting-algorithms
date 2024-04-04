@@ -1,6 +1,6 @@
 from colors import HSV_to_RGB
 
-def combes_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
+def combes_sort(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     """
     Trie une étape de la liste par le tri de Combes
     """
@@ -14,4 +14,4 @@ def combes_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
             if liste_hsv[i] > liste_hsv[i + gap]:
                 liste_hsv[i], liste_hsv[i + gap] = liste_hsv[i + gap], liste_hsv[i]
                 swapped = True
-        HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
