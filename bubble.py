@@ -1,4 +1,6 @@
-def bubble_sort_step(liste_hsv):
+from colors import HSV_to_RGB
+
+def bubble_sort_step(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     n = len(liste_hsv)
     for i in range(n - 1):
         for j in range(0, n - i - 1):
@@ -9,4 +11,4 @@ def bubble_sort_step(liste_hsv):
             elif liste_hsv[j][0] > liste_hsv[j + 1][0]:
                 # Sinon, comparez directement les valeurs de teinte
                 liste_hsv[j], liste_hsv[j + 1] = liste_hsv[j + 1], liste_hsv[j]
-    return liste_hsv
+            HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
