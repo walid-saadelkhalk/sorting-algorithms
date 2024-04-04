@@ -2,7 +2,6 @@ import pygame
 import math
 
 def draw_sorting(window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
-    # window.fill((0, 0, 0))
     # Paramètres du cercle
     circle_center = (a, b)
     circle_radius = radius
