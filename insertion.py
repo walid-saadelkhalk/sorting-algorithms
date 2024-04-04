@@ -2,7 +2,7 @@ from colors import HSV_to_RGB
 
 def insertion_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     n = len(liste_hsv)
-    for i in range(n - 1):
+    for i in range(n):
         for j in range(0, n - i - 1):
             key = liste_hsv[i]
             j = i-1

@@ -16,15 +16,7 @@ NUM_SECTIONS = 20
 WHITE = (255, 255, 255)
 
 liste_rgb = list_rgb(NUM_SECTIONS)
-liste_hsv = RGB_to_HSV(liste_rgb)
-liste_hsv_selection = liste_hsv.copy()
-liste_hsv_bubble = liste_hsv.copy()
-liste_hsv_insertion = liste_hsv.copy()
-liste_hsv_merge = liste_hsv.copy()
-liste_hsv_quick = liste_hsv.copy()
-liste_hsv_heap = liste_hsv.copy()
-liste_hsv_combes = liste_hsv.copy()
-
+liste_hsv_selection, liste_hsv_bubble, liste_hsv_insertion, liste_hsv_merge, liste_hsv_quick, liste_hsv_heap, liste_hsv_combes = RGB_to_HSV(liste_rgb)
 
 # Initialisation de pygame
 pygame.init()

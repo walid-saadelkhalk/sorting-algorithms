@@ -32,8 +32,15 @@ def RGB_to_HSV(list_rgb):
             s = 1
             v = 1
         list_hsv.append((h, s, v))
+        liste_hsv_selection = list_hsv.copy()
+        liste_hsv_bubble = list_hsv.copy()
+        liste_hsv_insertion = list_hsv.copy()
+        liste_hsv_merge = list_hsv.copy()
+        liste_hsv_quick = list_hsv.copy()
+        liste_hsv_heap = list_hsv.copy()
+        liste_hsv_combes = list_hsv.copy()
         
-    return list_hsv
+    return liste_hsv_selection, liste_hsv_bubble, liste_hsv_insertion, liste_hsv_merge, liste_hsv_quick, liste_hsv_heap, liste_hsv_combes
 
 def HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     liste_rgb.clear()
