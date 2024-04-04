@@ -1,5 +1,9 @@
 from colors import HSV_to_RGB
 from timer import chrono
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 
 def selection_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     for i in range(len(liste_hsv)):
@@ -8,4 +12,5 @@ def selection_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d
             if liste_hsv[j] < liste_hsv[min_index]:
                 min_index = j
         liste_hsv[i], liste_hsv[min_index] = liste_hsv[min_index], liste_hsv[i]
-        HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        with pygame_lock:
+            HSV_to_RGB(time_start,liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

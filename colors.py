@@ -1,5 +1,9 @@
 from sort_draw import draw_sorting
 import random
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 
 def list_rgb(NUM_SECTIONS):
     liste_rgb = []
@@ -61,4 +65,5 @@ def HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, ra
         elif 300 <= h < 360:
             r, g, b = c, 0, x
         liste_rgb.append((int((r + m) * 255), int((g + m) * 255), int((b + m) * 255)))
-        draw_sorting(time_start, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        with pygame_lock:
+            draw_sorting(time_start, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

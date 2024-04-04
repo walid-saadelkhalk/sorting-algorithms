@@ -1,4 +1,8 @@
 from colors import HSV_to_RGB
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 from timer import chrono
 
 def insertion_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
@@ -11,4 +15,5 @@ def insertion_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d
                 liste_hsv[j + 1] = liste_hsv[j]
                 j -= 1
             liste_hsv[j + 1] = key
-            HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+            with pygame_lock:
+                HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
