@@ -3,8 +3,7 @@ from bubble import *
 from selection import *
 from combes import *
 import pygame
-# import threading
-from multiprocessing import Process
+import threading
 
 window = pygame.display.set_mode((1000, 600))
 pygame.display.set_caption("Sorting Algorithms")
@@ -42,32 +41,28 @@ def combes_sort_thread():
 
 
 # Créer et démarrer un thread pour chaque algorithme de tri
-# bubble_thread = threading.Thread(target=bubble_sort_thread)
-# selection_thread = threading.Thread(target=selection_sort_thread)
-# combes_thread = threading.Thread(target=combes_sort_thread)
-if __name__ == '__main__':  
-    bubble_thread = Process(target=bubble_sort_thread)
-    selection_thread = Process(target=selection_sort_thread)
-    combes_thread = Process(target=combes_sort_thread)
+bubble_thread = threading.Thread(target=bubble_sort_thread)
+selection_thread = threading.Thread(target=selection_sort_thread)
+combes_thread = threading.Thread(target=combes_sort_thread)
 
-    bubble_thread.start()
-    selection_thread.start()
-    combes_thread.start()
+bubble_thread.start()
+selection_thread.start()
+combes_thread.start()
 
 
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-        # Trier une étape de la liste si le tri n'est pas terminé
-        if index < NUM_SECTIONS:
-            window.fill((0, 0, 0))
-            index += 1
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    # Trier une étape de la liste si le tri n'est pas terminé
+    if index < NUM_SECTIONS:
+        window.fill((0, 0, 0))
+        index += 1
 
-    # Attendre que tous les threads se terminent
-    bubble_thread.join()
-    selection_thread.join()
-    combes_thread.join()
+# Attendre que tous les threads se terminent
+bubble_thread.join()
+selection_thread.join()
+combes_thread.join()
 
 
-    pygame.quit()
+pygame.quit()
