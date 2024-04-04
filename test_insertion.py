@@ -15,17 +15,23 @@ pygame.display.set_caption("Cercle avec camemberts")
 GREEN = (0, 255, 0)
 RED = (255, 0, 0) 
 BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+ORANGE = (255, 165, 0)
+PURPLE = (128, 0, 128)
+CYAN = (0, 255, 255)
+MAGENTA = (255, 0, 255)
+
 # Paramètres du cercle
 circle_center = (width // 2, height // 2)
 circle_radius = min(width, height) // 3
 
 # Nombre de camemberts
-num_slices = 200
+num_slices = 100
 
 # Calcul des positions des points de départ et d'arrivée de chaque camembert
 slice_angles = [math.radians(i * (360 / num_slices)) for i in range(num_slices)]
 slice_points = [(circle_center[0] + circle_radius * math.cos(angle), circle_center[1] + circle_radius * math.sin(angle)) for angle in slice_angles]
-slice_colors = [random.choice([GREEN, RED, BLUE]) for _ in range(num_slices)]
+slice_colors = [random.choice([GREEN, RED, BLUE, YELLOW, ORANGE, PURPLE, CYAN, MAGENTA]) for _ in range(num_slices)]
 
 # Tri des couleurs par insertion
 def insertion_sort_color(color_list):
@@ -48,6 +54,16 @@ def color_priority(color):
         return 1
     elif color == BLUE:
         return 2
+    elif color == YELLOW:
+        return 3
+    elif color == ORANGE:
+        return 4
+    elif color == PURPLE:
+        return 5
+    elif color == CYAN:
+        return 6
+    elif color == MAGENTA:
+        return 7
 
 # Dessiner les camemberts
 def draw_slices():
