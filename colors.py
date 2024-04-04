@@ -42,7 +42,7 @@ def RGB_to_HSV(list_rgb):
         
     return liste_hsv_selection, liste_hsv_bubble, liste_hsv_insertion, liste_hsv_merge, liste_hsv_quick, liste_hsv_heap, liste_hsv_combes
 
-def HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
+def HSV_to_RGB(seconds, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     liste_rgb.clear()
     for h, s, v in liste_hsv:
         c = v * s
@@ -61,4 +61,4 @@ def HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
         elif 300 <= h < 360:
             r, g, b = c, 0, x
         liste_rgb.append((int((r + m) * 255), int((g + m) * 255), int((b + m) * 255)))
-        draw_sorting(window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        draw_sorting(seconds, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

@@ -1,10 +1,21 @@
 import pygame
 import math
 
-def draw_sorting(window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
+def draw_sorting(milliseconds, font, message, window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
+    sort_message = font.render(message, True, (255,255,255))
+    sort_rect = sort_message.get_rect()
+    sort_rect.center = (a, b + radius + 20)
+
+    time_message = font.render(str(milliseconds), True, (255,255,255))
+    time_rect = time_message.get_rect()
+    time_rect.center = (a, b + radius + 80)
     # Paramètres du cercle
     circle_center = (a, b)
     circle_radius = radius
+
+    window.blit(sort_message, sort_rect)
+    window.blit(time_message, time_rect)
+
     pygame.draw.circle(window, WHITE, circle_center, circle_radius, 1)
     # Ajuster la taille de liste_rgb pour correspondre à NUM_SECTIONS
     liste_rgb = liste_rgb[:NUM_SECTIONS]
