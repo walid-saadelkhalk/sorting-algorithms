@@ -26,7 +26,7 @@ selection_sort(time_start, liste_hsv_selection, font, 'Selection', window, liste
 bubble_sort_step(time_start, liste_hsv_bubble, font, 'Bubble', window, liste_rgb, 270, 100, 75, WHITE, NUM_SECTIONS)
 insertion_sort(time_start, liste_hsv_insertion, font, 'Insertion', window, liste_rgb, 440, 100, 75, WHITE, NUM_SECTIONS)
 merge_sort(time_start, liste_hsv_merge, font, 'Merge', window, liste_rgb, 610, 100, 75, WHITE, NUM_SECTIONS)
-quick_sort(time_start, liste_hsv_quick, font, 'Quick', window, liste_rgb, 780, 100, 75, WHITE, NUM_SECTIONS)
+quick_sort_step(time_start, liste_hsv_quick, font, 'Quick', window, liste_rgb, 780, 100, 75, WHITE, NUM_SECTIONS)
 heap_sort(time_start, liste_hsv_heap, font, 'Heap', window, liste_rgb, 950, 100, 75, WHITE, NUM_SECTIONS)
 combes_sort(time_start, liste_hsv_combes, font, 'Combes', window, liste_rgb, 1120, 100, 75, WHITE, NUM_SECTIONS)
 

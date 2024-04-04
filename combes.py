@@ -1,11 +1,9 @@
 from colors import HSV_to_RGB
-from timer import chrono
 
 def combes_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     """
     Trie une étape de la liste par le tri de Combes
     """
-    seconds = chrono(time_start)
     n = len(liste_hsv)
     gap = n
     swapped = True
@@ -16,4 +14,4 @@ def combes_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, r
             if liste_hsv[i] > liste_hsv[i + gap]:
                 liste_hsv[i], liste_hsv[i + gap] = liste_hsv[i + gap], liste_hsv[i]
                 swapped = True
-        HSV_to_RGB(seconds, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

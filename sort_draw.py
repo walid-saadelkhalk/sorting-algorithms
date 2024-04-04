@@ -1,14 +1,19 @@
 import pygame
 import math
+from timer import chrono
 
-def draw_sorting(milliseconds, font, message, window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
+def draw_sorting(time_start, font, message, window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
     sort_message = font.render(message, True, (255,255,255))
     sort_rect = sort_message.get_rect()
     sort_rect.center = (a, b + radius + 20)
 
-    time_message = font.render(str(milliseconds), True, (255,255,255))
+    seconds = chrono(time_start)
+    time_message = font.render(str(seconds), True, (255,255,255))
     time_rect = time_message.get_rect()
     time_rect.center = (a, b + radius + 80)
+
+    window.fill((0, 0, 0), time_rect)
+    
     # Paramètres du cercle
     circle_center = (a, b)
     circle_radius = radius
