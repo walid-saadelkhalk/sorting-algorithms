@@ -1,5 +1,9 @@
 from colors import HSV_to_RGB
-import random
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
+
 
 def quick_sort(liste_hsv):
     if len(liste_hsv) <= 1:
@@ -15,4 +19,5 @@ def quick_sort(liste_hsv):
 
 def quick_sort_step(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     liste_hsv = quick_sort(liste_hsv)
-    HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+    with pygame_lock:
+        HSV_to_RGB(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

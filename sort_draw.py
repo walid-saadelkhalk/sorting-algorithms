@@ -1,12 +1,16 @@
 import pygame
 import math
+import threading
+
+draw_lock = threading.Lock()
 from timer import chrono
 
 def draw_sorting(time_start, font, message, window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
-    sort_message = font.render(message, True, (255,255,255))
-    sort_rect = sort_message.get_rect()
-    sort_rect.center = (a, b + radius + 20)
-
+    with draw_lock:
+        sort_message = font.render(message, True, (255,255,255))
+        sort_rect = sort_message.get_rect()
+        sort_rect.center = (a, b + radius + 20)
+    
     seconds = chrono(time_start)
     time_message = font.render(str(seconds), True, (255,255,255))
     time_rect = time_message.get_rect()
