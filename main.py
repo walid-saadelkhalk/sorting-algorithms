@@ -12,7 +12,7 @@ window = pygame.display.set_mode((1200, 300))
 pygame.display.set_caption("Sorting Algorithms")
 
 
-NUM_SECTIONS = 20
+NUM_SECTIONS = 500
 WHITE = (255, 255, 255)
 
 liste_rgb = list_rgb(NUM_SECTIONS)

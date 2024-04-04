@@ -14,6 +14,14 @@ def quick_sort(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     left_sorted = quick_sort(left, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
     right_sorted = quick_sort(right, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
 
+    # Vérifier si la partition gauche est vide
+    if left_sorted is None:
+        left_sorted = []
+
+    # Vérifier si la partition droite est vide
+    if right_sorted is None:
+        right_sorted = []
+
     # Concaténation des partitions triées et du pivot
     liste_hsv = left_sorted + middle + right_sorted
     
