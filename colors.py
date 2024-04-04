@@ -31,6 +31,7 @@ def RGB_to_HSV(list_rgb):
             s = 1
         v = cmax
         list_hsv.append((h, s, v))
+        
     return list_hsv
 
 def HSV_to_RGB(liste_hsv, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
