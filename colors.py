@@ -27,9 +27,10 @@ def RGB_to_HSV(list_rgb):
             h = 60 * ((r - g) / delta + 4)
         if cmax == 0:
             s = 0
+            v = 0
         else:
             s = 1
-        v = cmax
+            v = 1
         list_hsv.append((h, s, v))
         
     return list_hsv

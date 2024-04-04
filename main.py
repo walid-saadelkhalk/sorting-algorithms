@@ -2,35 +2,46 @@ from colors import *
 from bubble import *
 from selection import *
 from combes import *
+from insertion import *
+from heapify import *
+from merge import *
+from quick import *
 import pygame
 
-window = pygame.display.set_mode((1000, 600))
+window = pygame.display.set_mode((1200, 300))
 pygame.display.set_caption("Sorting Algorithms")
 
 
-NUM_SECTIONS = 50
+NUM_SECTIONS = 20
 WHITE = (255, 255, 255)
 
 liste_rgb = list_rgb(NUM_SECTIONS)
 liste_hsv = RGB_to_HSV(liste_rgb)
+liste_hsv_selection = liste_hsv.copy()
+liste_hsv_bubble = liste_hsv.copy()
+liste_hsv_insertion = liste_hsv.copy()
+liste_hsv_merge = liste_hsv.copy()
+liste_hsv_quick = liste_hsv.copy()
+liste_hsv_heap = liste_hsv.copy()
+liste_hsv_combes = liste_hsv.copy()
 
 
 # Initialisation de pygame
 pygame.init()
 
-# Boucle principale du jeu
+selection_sort(liste_hsv_selection, window, liste_rgb, 100, 100, 75, WHITE, NUM_SECTIONS)
+bubble_sort_step(liste_hsv_bubble, window, liste_rgb, 270, 100, 75, WHITE, NUM_SECTIONS)
+insertion_sort(liste_hsv_insertion, window, liste_rgb, 440, 100, 75, WHITE, NUM_SECTIONS)
+merge_sort(liste_hsv_merge, window, liste_rgb, 610, 100, 75, WHITE, NUM_SECTIONS)
+quick_sort(liste_hsv_quick, window, liste_rgb, 780, 100, 75, WHITE, NUM_SECTIONS)
+heap_sort(liste_hsv_heap, window, liste_rgb, 950, 100, 75, WHITE, NUM_SECTIONS)
+combes_sort(liste_hsv_combes, window, liste_rgb, 1120, 100, 75, WHITE, NUM_SECTIONS)
+
 running = True
-index = 0
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    # Trier une étape de la liste si le tri n'est pas terminé
-    if index < NUM_SECTIONS:
-        window.fill((255, 255, 255))
-        bubble_sort_step(liste_hsv, window, liste_rgb, 150, 150, 100, WHITE, NUM_SECTIONS)
-        selection_sort(liste_hsv, window, liste_rgb, 450, 150, 100, WHITE, NUM_SECTIONS)
-        combes_sort(liste_hsv, window, liste_rgb, 750, 150, 100, WHITE, NUM_SECTIONS)
-        index += 1
 
 pygame.quit()
