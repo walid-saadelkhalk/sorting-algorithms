@@ -10,6 +10,7 @@ def insertion_sort(number_list):
             j -= 1
         number_list[j + 1] = key
 
+
 def heapify(number_list, n, i):
     largest = i
     l = 2 * i + 1

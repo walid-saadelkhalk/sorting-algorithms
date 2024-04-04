@@ -96,5 +96,3 @@ def main():
 
 main()
 
-
-# total_list = [range(len(red)), range(len(green)), range(len(blue))]
