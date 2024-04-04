@@ -1,4 +1,8 @@
 from colors import HSV_to_RGB
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 
 def bubble_sort_step(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     n = len(liste_hsv)
@@ -11,4 +15,5 @@ def bubble_sort_step(liste_hsv, font, message, window, liste_rgb, a, d, radius, 
             elif liste_hsv[j][0] > liste_hsv[j + 1][0]:
                 # Sinon, comparez directement les valeurs de teinte
                 liste_hsv[j], liste_hsv[j + 1] = liste_hsv[j + 1], liste_hsv[j]
-            HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+            with pygame_lock:
+                HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

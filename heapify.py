@@ -1,4 +1,8 @@
 from colors import HSV_to_RGB
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 
 def heapify(number_list, n, i):
     largest = i
@@ -20,9 +24,10 @@ def heap_sort(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, 
 
     for i in range(n // 2 - 1, -1, -1):
         heapify(liste_hsv, n, i)
-        HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+
 
     for i in range(n-1, 0, -1):
         liste_hsv[i], liste_hsv[0] = liste_hsv[0], liste_hsv[i]
         heapify(liste_hsv, i, 0)
-        HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        with pygame_lock:
+            HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)

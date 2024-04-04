@@ -1,4 +1,8 @@
 from colors import HSV_to_RGB
+from threading import Lock
+
+# Créer un verrou
+pygame_lock = Lock()
 
 def combes_sort(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     """
@@ -14,4 +18,5 @@ def combes_sort(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE
             if liste_hsv[i] > liste_hsv[i + gap]:
                 liste_hsv[i], liste_hsv[i + gap] = liste_hsv[i + gap], liste_hsv[i]
                 swapped = True
-        HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
+        with pygame_lock:
+            HSV_to_RGB(liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS)
