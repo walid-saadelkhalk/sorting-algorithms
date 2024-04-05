@@ -1,8 +1,18 @@
 from colors import HSV_to_RGB
 from threading import Lock
 
-# Créer un verrou
+'''
+Quick sort algorithm :
+1. Choose a pivot element from the list.
+2. Partition the list such that all elements less than the pivot are on the left and all elements greater than the pivot are on the right.
+3. Recursively sort the left and right sublists.
+4. Combine the sorted sublists.
+'''
+
+
 pygame_lock = Lock()
+
+
 
 
 def quick_sort(liste_hsv):

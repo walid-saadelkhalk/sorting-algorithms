@@ -1,9 +1,17 @@
 from colors import HSV_to_RGB
-from timer import chrono
-
 from threading import Lock
 
-# Créer un verrou
+'''
+Merge sort algorithm :
+1. Divide the list into two halves.
+2. Divide the two halves into two halves.
+3. Repeat the process until all elements are divided into individual elements.
+4. Sort the elements of the first half and the second half.
+5. Merge the sorted halves.
+6. Repeat the process until all elements are merged into a single sorted list.
+'''
+
+
 pygame_lock = Lock()
 
 def merge_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):

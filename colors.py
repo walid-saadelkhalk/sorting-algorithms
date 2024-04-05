@@ -2,7 +2,10 @@ from sort_draw import draw_sorting
 import random
 from threading import Lock
 
-# Créer un verrou
+'''
+Convert RGB to HSV and vice versa
+'''
+
 pygame_lock = Lock()
 
 def list_rgb(NUM_SECTIONS):

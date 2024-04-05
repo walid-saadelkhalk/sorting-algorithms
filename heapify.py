@@ -1,8 +1,17 @@
 from colors import HSV_to_RGB
-from timer import chrono
 from threading import Lock
 
-# Créer un verrou
+'''
+Heap sort algorithm :
+The heap sort algorithm is a comparison-based sorting algorithm.
+1. Build a max heap from the input data.
+2. The largest element is stored at the root of the heap.
+3. Swap the root element with the last element of the heap.
+4. Remove the last element from the heap.
+5. Heapify the root element.
+6. Repeat the process until the heap is empty.
+'''
+
 pygame_lock = Lock()
 
 def heapify(number_list, n, i):

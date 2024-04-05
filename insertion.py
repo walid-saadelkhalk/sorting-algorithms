@@ -1,9 +1,17 @@
 from colors import HSV_to_RGB
 from threading import Lock
 
-# Créer un verrou
+'''
+Insertion sort algorithm :
+1. Start from the second element of the array.
+2. Compare the second element with the first element.
+3. If the second element is less than the first element, insert it at the correct position.
+4. Compare the third element with the first and second elements and place it at the correct position.
+5. Repeat the process until all elements are in the correct position.
+'''
+
 pygame_lock = Lock()
-from timer import chrono
+
 
 def insertion_sort(time_start, liste_hsv, font, message, window, liste_rgb, a, d, radius, WHITE, NUM_SECTIONS):
     n = len(liste_hsv)
