@@ -105,11 +105,11 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contributor
 
-- Barbara VANNI  []
+- **Barbara VANNI** (<a href="https://github.com/barbara-vanni"></a>)
 
-- Walid SAAD EL KHALK
+- **Walid SAAD EL KHALK** (<a href="https://github.com/walid-saadelkhalk"></a>)
 
-- Anthony Yrles 
+- **Anthony Yrles** (<a href="https://github.com/anthony-yrles"></a>)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
