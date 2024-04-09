@@ -105,11 +105,11 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contributor
 
-- **Barbara VANNI** (<a href="https://github.com/barbara-vanni"></a>)
+- **Barbara VANNI** (<a href="https://github.com/barbara-vanni">github</a>)
 
-- **Walid SAAD EL KHALK** (<a href="https://github.com/walid-saadelkhalk"></a>)
+- **Walid SAAD EL KHALK** (<a href="https://github.com/walid-saadelkhalk">github</a>)
 
-- **Anthony Yrles** (<a href="https://github.com/anthony-yrles"></a>)
+- **Anthony Yrles** (<a href="https://github.com/anthony-yrles">github</a>)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
