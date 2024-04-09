@@ -1,5 +1,4 @@
 from colors import HSV_to_RGB
-from timer import chrono
 from threading import Lock
 
 '''

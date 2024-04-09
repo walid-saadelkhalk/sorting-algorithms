@@ -15,7 +15,7 @@ pygame.init()
 window = pygame.display.set_mode((1200, 300))
 pygame.display.set_caption("Sorting Algorithms")
 
-NUM_SECTIONS = 100
+NUM_SECTIONS = 80
 WHITE = (255, 255, 255)
 font = pygame.font.Font(None, 30)
 time_start = time.time()

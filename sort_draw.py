@@ -1,9 +1,9 @@
 import pygame
 import math
 import threading
+from timer import chrono
 
 draw_lock = threading.Lock()
-from timer import chrono
 
 def draw_sorting(time_start, font, message, window, liste_rgb, a, b, radius, WHITE, NUM_SECTIONS):
     with draw_lock:
