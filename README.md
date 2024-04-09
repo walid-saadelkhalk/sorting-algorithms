@@ -38,8 +38,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contributor">Contributor</a></li>
+    <li><a href="#contributing">Contributing</a></li>
   </ol>
 </details>
 
@@ -78,9 +78,21 @@ The graphical interface displays a color wheel where each color is represented b
 
 
 
+<!-- CONTACT -->
+## Contributor
+
+- **Barbara VANNI** (<a href="https://github.com/barbara-vanni">github</a>)
+
+- **Walid SAAD EL KHALK** (<a href="https://github.com/walid-saadelkhalk">github</a>)
+
+- **Anthony Yrles** (<a href="https://github.com/anthony-yrles">github</a>)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- CONTRIBUTING -->
-## Contributing
+#### Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -95,18 +107,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- CONTACT -->
-## Contributor
-
-- **Barbara VANNI** (<a href="https://github.com/barbara-vanni">github</a>)
-
-- **Walid SAAD EL KHALK** (<a href="https://github.com/walid-saadelkhalk">github</a>)
-
-- **Anthony Yrles** (<a href="https://github.com/anthony-yrles">github</a>)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
