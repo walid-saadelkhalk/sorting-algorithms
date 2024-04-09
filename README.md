@@ -15,11 +15,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  <h2 align="center">Sort Algorithm</h2>
   <a href="https://github.com/walid-saadelkhalk/sorting-algorithms">
     <img src="assets/logo.png" alt="Logo" width="539" height="435">
   </a>
 
-  <h3 align="center">Sort Algorithm</h3>
 
   <p align="center">
     This project is an application that visualizes the sorting of a color wheel using the several Sort algorithm. 
@@ -97,7 +97,7 @@ The graphical interface displays a color wheel where each color is represented b
 #### Contributing
 
 <h6>
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
