@@ -10,14 +10,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][3]]
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/walid-saadelkhalk/sorting-algorithms">
-    <img src="assets/logo.png" alt="Logo" width="250" height="150">
+    <img src="assets/logo.png" alt="Logo" width="250" height="200">
   </a>
 
   <h3 align="center">Sort Algorithm</h3>
