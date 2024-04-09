@@ -66,7 +66,7 @@ We work on seven differents algorithm:
 
 The graphical interface displays a color wheel where each color is represented by a value in an array, and the sorting is performed in real-time to show the sorting process.
 
-<img src="assets/capture.png" alt="Program window" width="1803" height="498">
+<img src="assets/capture.png" alt="Program window" width="900" height="250">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
